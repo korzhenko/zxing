@@ -110,6 +110,7 @@ public final class Generator implements EntryPoint {
 
   private void loadGenerators() {
     generators.add(new CalendarEventGenerator(changeHandler, keyPressHandler));
+    generators.add(new RandomTextGenerator(changeHandler, keyPressHandler));
     generators.add(new ContactInfoGenerator(changeHandler, keyPressHandler));
     generators.add(new EmailGenerator(changeHandler, keyPressHandler));
     generators.add(new GeoLocationGenerator(changeHandler, keyPressHandler));
