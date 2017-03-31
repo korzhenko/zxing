@@ -18,7 +18,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link type="text/css" rel="stylesheet" href="Generator.css">
-    <title>QR Code Generator from the ZXing Project</title>
+    <title>Fork of QR Code Generator from the ZXing Project by O.Korzhenko</title>
     <script type="text/javascript" language="javascript" src="generator/generator.nocache.js"></script>
   </head>
   <body>
@@ -31,11 +31,23 @@
     </noscript>
 
     <div id="header">
-      <h1>QR Code Generator <span>from the ZXing Project</span></h1>
+      <h1>Fork of QR Code Generator <span>from the ZXing Project by O.Korzhenko</span></h1>
+      Added random string QR code generator from pattern and interface for GET/POST query.
     </div>
-
     <div id="ui"></div>
 
+
+    <div id="help">
+      URL for query: <a href="./generatorservlet"> this </a><br>
+      Parameters:
+      <ul>
+        <li>pattern: Pattern string</li>
+        <li>count: quantity of the generated  string. Default: 1</li>
+        <li>separator: separator between strings. Default: ;</li>
+        <li>level: error correction level. Default: L(large)</li>
+        <li>encoding: Character encoding. Default: UTF-8</li>
+      </ul>
+    </div>
     <div id="footer">
       <a href="https://github.com/zxing/zxing/">ZXing Project Home Page</a>
     </div>

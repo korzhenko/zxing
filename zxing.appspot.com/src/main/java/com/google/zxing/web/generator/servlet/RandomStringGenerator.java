@@ -1,10 +1,10 @@
-package com.google.zxing.web.generator.client;
+package com.google.zxing.web.generator.servlet;
 
 import java.util.Random;
 
 /**
  */
-final class  RandomStringGenerator {
+final class RandomStringGenerator {
     private static final  String sLowerCharString = "abcdefghijklmnopqrstuvwxyz";
     private static final String sDigitalString = "0123456789";
     private static final String sUpperCharString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -117,7 +117,7 @@ final class  RandomStringGenerator {
      */
 
     public static String generate(String pPattern, int count, String separator) {
-        String returnValue = "";
+        String returnValue = RandomStringGenerator.generate(pPattern);
         for (int i = 1; i < count; i++) {
             returnValue += separator + RandomStringGenerator.generate(pPattern);
         }

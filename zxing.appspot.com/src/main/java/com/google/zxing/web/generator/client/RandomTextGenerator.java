@@ -1,7 +1,10 @@
 package com.google.zxing.web.generator.client;
 
-import com.google.gwt.event.dom.client.*;
-import com.google.gwt.user.client.ui.*;
+import com.google.gwt.event.dom.client.ChangeHandler;
+import com.google.gwt.event.dom.client.KeyPressHandler;
+import com.google.gwt.user.client.ui.Grid;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
 
 
 /**
@@ -71,14 +74,7 @@ public final class RandomTextGenerator  implements GeneratorSource {
     private String getRandomText() throws GeneratorException {
         validate(mPattern);
         validate(mCount);
-        String stringSeparator = mSeparator.getText();
-        String stringPattern = mPattern.getText();
-        String resultValue = RandomStringGenerator.generate(stringPattern);
-        int t = Integer.parseInt(mCount.getText());
-        for (int i = 1; i < t; i++) {
-            resultValue += stringSeparator + RandomStringGenerator.generate(stringPattern);
-        }
-        return resultValue;
+        return RandomStringGenerator.generate(mPattern.getText(),Integer.parseInt(mCount.getText()),mSeparator.getText());
     }
 
     @Override

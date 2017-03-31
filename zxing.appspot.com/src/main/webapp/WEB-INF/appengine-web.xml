@@ -15,6 +15,7 @@
  limitations under the License.
  -->
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-  <application>zxing-hrd</application>
-  <version>13</version>
+  <application>zxing-fork</application>
+  <version>1</version>
+  <threadsafe>true</threadsafe>
 </appengine-web-app>
