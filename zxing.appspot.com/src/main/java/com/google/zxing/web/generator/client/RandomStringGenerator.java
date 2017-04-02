@@ -117,7 +117,7 @@ final class  RandomStringGenerator {
      */
 
     public static String generate(String pPattern, int count, String separator) {
-        String returnValue = "";
+        String returnValue = RandomStringGenerator.generate(pPattern);
         for (int i = 1; i < count; i++) {
             returnValue += separator + RandomStringGenerator.generate(pPattern);
         }
